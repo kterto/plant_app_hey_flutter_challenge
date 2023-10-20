@@ -29,6 +29,9 @@ class HomeSmartView extends ConsumerWidget {
     PendingRoutesHandler handler,
     HomeState state,
   ) {
-    return state.flow.when(intro: () => const [IntroRouteWrapper()]);
+    return state.flow.when(
+      intro: () => const [IntroRouteWrapper()],
+      homeRoot: () => const [HomeRootRouteWrapper()],
+    );
   }
 }

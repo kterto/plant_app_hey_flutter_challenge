@@ -17,6 +17,24 @@ abstract class $AppRouter extends _i2.RootStackRouter {
 
   @override
   final Map<String, _i2.PageFactory> pagesMap = {
+    CartRouteWrapper.name: (routeData) {
+      return _i2.AutoRoutePage<Never>(
+        routeData: routeData,
+        child: const _i1.CartScreenWrapper(),
+      );
+    },
+    HomeRootRouteWrapper.name: (routeData) {
+      return _i2.AutoRoutePage<Never>(
+        routeData: routeData,
+        child: const _i1.HomeRootScreenWrapper(),
+      );
+    },
+    HomeRouteWrapper.name: (routeData) {
+      return _i2.AutoRoutePage<Never>(
+        routeData: routeData,
+        child: const _i1.HomeScreenWrapper(),
+      );
+    },
     HomeSmartRouteWrapper.name: (routeData) {
       return _i2.AutoRoutePage<Never>(
         routeData: routeData,
@@ -30,6 +48,48 @@ abstract class $AppRouter extends _i2.RootStackRouter {
       );
     },
   };
+}
+
+/// generated route for
+/// [_i1.CartScreenWrapper]
+class CartRouteWrapper extends _i2.PageRouteInfo<void> {
+  const CartRouteWrapper({List<_i2.PageRouteInfo>? children})
+      : super(
+          CartRouteWrapper.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'CartRouteWrapper';
+
+  static const _i2.PageInfo<void> page = _i2.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i1.HomeRootScreenWrapper]
+class HomeRootRouteWrapper extends _i2.PageRouteInfo<void> {
+  const HomeRootRouteWrapper({List<_i2.PageRouteInfo>? children})
+      : super(
+          HomeRootRouteWrapper.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'HomeRootRouteWrapper';
+
+  static const _i2.PageInfo<void> page = _i2.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i1.HomeScreenWrapper]
+class HomeRouteWrapper extends _i2.PageRouteInfo<void> {
+  const HomeRouteWrapper({List<_i2.PageRouteInfo>? children})
+      : super(
+          HomeRouteWrapper.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'HomeRouteWrapper';
+
+  static const _i2.PageInfo<void> page = _i2.PageInfo<void>(name);
 }
 
 /// generated route for

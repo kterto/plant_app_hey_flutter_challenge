@@ -17,6 +17,7 @@ class HomeState with _$HomeState {
 @freezed
 class HomeFlow with _$HomeFlow {
   const factory HomeFlow.intro() = Intro;
+  const factory HomeFlow.homeRoot() = HomeRoot;
 }
 
 @freezed

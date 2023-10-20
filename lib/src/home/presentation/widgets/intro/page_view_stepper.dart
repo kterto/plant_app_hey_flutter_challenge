@@ -53,6 +53,19 @@ class _PageViewStepperState extends State<PageViewStepper>
   }
 
   @override
+  void dispose() {
+    for (var controller in _controllers) {
+      try {
+        controller.dispose();
+      } catch (e) {
+        debugPrint("failed to dispose controller: $e");
+      }
+    }
+
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,

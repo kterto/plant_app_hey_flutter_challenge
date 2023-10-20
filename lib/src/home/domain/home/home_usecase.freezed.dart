@@ -19,32 +19,38 @@ mixin _$HomeEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
+    required TResult Function() skipIntroPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
+    TResult? Function()? skipIntroPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? skipIntroPressed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
+    required TResult Function(SkipIntroPressed value) skipIntroPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
+    TResult? Function(SkipIntroPressed value)? skipIntroPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(SkipIntroPressed value)? skipIntroPressed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -106,6 +112,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
+    required TResult Function() skipIntroPressed,
   }) {
     return started();
   }
@@ -114,6 +121,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
+    TResult? Function()? skipIntroPressed,
   }) {
     return started?.call();
   }
@@ -122,6 +130,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? skipIntroPressed,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -134,6 +143,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
+    required TResult Function(SkipIntroPressed value) skipIntroPressed,
   }) {
     return started(this);
   }
@@ -142,6 +152,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
+    TResult? Function(SkipIntroPressed value)? skipIntroPressed,
   }) {
     return started?.call(this);
   }
@@ -150,6 +161,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(SkipIntroPressed value)? skipIntroPressed,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -161,6 +173,108 @@ class _$StartedImpl implements _Started {
 
 abstract class _Started implements HomeEvent {
   const factory _Started() = _$StartedImpl;
+}
+
+/// @nodoc
+abstract class _$$SkipIntroPressedImplCopyWith<$Res> {
+  factory _$$SkipIntroPressedImplCopyWith(_$SkipIntroPressedImpl value,
+          $Res Function(_$SkipIntroPressedImpl) then) =
+      __$$SkipIntroPressedImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SkipIntroPressedImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$SkipIntroPressedImpl>
+    implements _$$SkipIntroPressedImplCopyWith<$Res> {
+  __$$SkipIntroPressedImplCopyWithImpl(_$SkipIntroPressedImpl _value,
+      $Res Function(_$SkipIntroPressedImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SkipIntroPressedImpl implements SkipIntroPressed {
+  const _$SkipIntroPressedImpl();
+
+  @override
+  String toString() {
+    return 'HomeEvent.skipIntroPressed()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$SkipIntroPressedImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() skipIntroPressed,
+  }) {
+    return skipIntroPressed();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? skipIntroPressed,
+  }) {
+    return skipIntroPressed?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? skipIntroPressed,
+    required TResult orElse(),
+  }) {
+    if (skipIntroPressed != null) {
+      return skipIntroPressed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(SkipIntroPressed value) skipIntroPressed,
+  }) {
+    return skipIntroPressed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(SkipIntroPressed value)? skipIntroPressed,
+  }) {
+    return skipIntroPressed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(SkipIntroPressed value)? skipIntroPressed,
+    required TResult orElse(),
+  }) {
+    if (skipIntroPressed != null) {
+      return skipIntroPressed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SkipIntroPressed implements HomeEvent {
+  const factory SkipIntroPressed() = _$SkipIntroPressedImpl;
 }
 
 /// @nodoc
@@ -327,32 +441,38 @@ mixin _$HomeFlow {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() intro,
+    required TResult Function() homeRoot,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? intro,
+    TResult? Function()? homeRoot,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? intro,
+    TResult Function()? homeRoot,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Intro value) intro,
+    required TResult Function(HomeRoot value) homeRoot,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Intro value)? intro,
+    TResult? Function(HomeRoot value)? homeRoot,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Intro value)? intro,
+    TResult Function(HomeRoot value)? homeRoot,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -414,6 +534,7 @@ class _$IntroImpl implements Intro {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() intro,
+    required TResult Function() homeRoot,
   }) {
     return intro();
   }
@@ -422,6 +543,7 @@ class _$IntroImpl implements Intro {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? intro,
+    TResult? Function()? homeRoot,
   }) {
     return intro?.call();
   }
@@ -430,6 +552,7 @@ class _$IntroImpl implements Intro {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? intro,
+    TResult Function()? homeRoot,
     required TResult orElse(),
   }) {
     if (intro != null) {
@@ -442,6 +565,7 @@ class _$IntroImpl implements Intro {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Intro value) intro,
+    required TResult Function(HomeRoot value) homeRoot,
   }) {
     return intro(this);
   }
@@ -450,6 +574,7 @@ class _$IntroImpl implements Intro {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Intro value)? intro,
+    TResult? Function(HomeRoot value)? homeRoot,
   }) {
     return intro?.call(this);
   }
@@ -458,6 +583,7 @@ class _$IntroImpl implements Intro {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Intro value)? intro,
+    TResult Function(HomeRoot value)? homeRoot,
     required TResult orElse(),
   }) {
     if (intro != null) {
@@ -469,6 +595,108 @@ class _$IntroImpl implements Intro {
 
 abstract class Intro implements HomeFlow {
   const factory Intro() = _$IntroImpl;
+}
+
+/// @nodoc
+abstract class _$$HomeRootImplCopyWith<$Res> {
+  factory _$$HomeRootImplCopyWith(
+          _$HomeRootImpl value, $Res Function(_$HomeRootImpl) then) =
+      __$$HomeRootImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$HomeRootImplCopyWithImpl<$Res>
+    extends _$HomeFlowCopyWithImpl<$Res, _$HomeRootImpl>
+    implements _$$HomeRootImplCopyWith<$Res> {
+  __$$HomeRootImplCopyWithImpl(
+      _$HomeRootImpl _value, $Res Function(_$HomeRootImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$HomeRootImpl implements HomeRoot {
+  const _$HomeRootImpl();
+
+  @override
+  String toString() {
+    return 'HomeFlow.homeRoot()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$HomeRootImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() intro,
+    required TResult Function() homeRoot,
+  }) {
+    return homeRoot();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? intro,
+    TResult? Function()? homeRoot,
+  }) {
+    return homeRoot?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? intro,
+    TResult Function()? homeRoot,
+    required TResult orElse(),
+  }) {
+    if (homeRoot != null) {
+      return homeRoot();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Intro value) intro,
+    required TResult Function(HomeRoot value) homeRoot,
+  }) {
+    return homeRoot(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Intro value)? intro,
+    TResult? Function(HomeRoot value)? homeRoot,
+  }) {
+    return homeRoot?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Intro value)? intro,
+    TResult Function(HomeRoot value)? homeRoot,
+    required TResult orElse(),
+  }) {
+    if (homeRoot != null) {
+      return homeRoot(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class HomeRoot implements HomeFlow {
+  const factory HomeRoot() = _$HomeRootImpl;
 }
 
 /// @nodoc
