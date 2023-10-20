@@ -1,10 +1,12 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:plant_app_hey_flutter_challenge/src/home/domain/home/home_usecase.dart';
 import 'package:plant_app_hey_flutter_challenge/src/home/home_providers.dart';
 import 'package:plant_app_hey_flutter_challenge/src/router/app_router.gr.dart';
+import 'package:plant_app_hey_flutter_challenge/src/shared/design_system/tokens/color_tokens.dart';
 
 class HomeSmartView extends ConsumerWidget {
   const HomeSmartView({super.key});
@@ -23,7 +25,20 @@ class HomeSmartView extends ConsumerWidget {
     );
   }
 
-  void _listener(BuildContext context, HomeState state) {}
+  void _listener(BuildContext context, HomeState state) {
+    state.flow.when(
+      intro: () => SystemChrome.setSystemUIOverlayStyle(
+        const SystemUiOverlayStyle(
+          systemNavigationBarColor: ColorTokens.grayScale100,
+        ),
+      ),
+      homeRoot: () => SystemChrome.setSystemUIOverlayStyle(
+        const SystemUiOverlayStyle(
+          systemNavigationBarColor: ColorTokens.grayScale700,
+        ),
+      ),
+    );
+  }
 
   List<PageRouteInfo<dynamic>> _routes(
     PendingRoutesHandler handler,

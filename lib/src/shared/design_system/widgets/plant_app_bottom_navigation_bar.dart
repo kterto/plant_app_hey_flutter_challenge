@@ -29,20 +29,28 @@ class PlantAppBottomNavitagionBar extends StatelessWidget {
       items: [
         BottomNavigationBarItem(
           icon: CircleAvatar(
+            radius: SpacingTokens.s20,
             backgroundColor: currentIndex == 0
                 ? ColorTokens.primaryMain
                 : context.bottomNavigationBarTheme.backgroundColor,
-            child: const Icon(PlantAppIcons.home_6_line),
+            child: const Icon(
+              PlantAppIcons.home_6_line,
+              size: SpacingTokens.s24,
+            ),
           ),
           label: '',
           backgroundColor: ColorTokens.primaryMain,
         ),
         BottomNavigationBarItem(
           icon: CircleAvatar(
+            radius: SpacingTokens.s20,
             backgroundColor: currentIndex == 1
                 ? ColorTokens.primaryMain
                 : context.bottomNavigationBarTheme.backgroundColor,
-            child: const Icon(PlantAppIcons.handbag_line),
+            child: const Icon(
+              PlantAppIcons.handbag_line,
+              size: SpacingTokens.s24,
+            ),
           ),
           label: '',
           backgroundColor: ColorTokens.primaryMain,
@@ -1165,7 +1173,7 @@ class _CustomBottomNavigationBarState extends State<_CustomBottomNavigationBar>
               // Splashes.
               type: MaterialType.transparency,
               child: Padding(
-                padding: EdgeInsets.only(bottom: additionalBottomPadding),
+                padding: EdgeInsets.zero,
                 child: MediaQuery.removePadding(
                   context: context,
                   removeBottom: true,
@@ -1221,8 +1229,8 @@ class _Bar extends StatelessWidget {
       color: color,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(SpacingTokens.s32),
-          topRight: Radius.circular(SpacingTokens.s32),
+          topLeft: Radius.circular(SpacingTokens.s48),
+          topRight: Radius.circular(SpacingTokens.s48),
         ),
       ),
       child: alignedChild,
