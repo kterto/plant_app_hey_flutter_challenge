@@ -27,4 +27,6 @@ class PlantAppIcons {
       IconData(0xe801, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData handbag_line =
       IconData(0xe802, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData equalizer_line =
+      IconData(0xe803, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }

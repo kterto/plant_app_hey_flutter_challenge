@@ -34,7 +34,7 @@ class PlantAppInputDecorationTheme {
         }
       },
     ),
-    contentPadding: const EdgeInsets.symmetric(horizontal: SpacingTokens.s8),
+    contentPadding: const EdgeInsets.all(SpacingTokens.s8),
     fillColor: Colors.white,
     filled: true,
   );
